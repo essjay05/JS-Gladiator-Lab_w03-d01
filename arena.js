@@ -38,3 +38,4 @@ colosseum.addGladiator(max);
 colosseum.addGladiator(titus);
 colosseum.addGladiator(andronicus);
 console.log(colosseum.gladiators);
+console.log(colosseum.gladiators.length);
