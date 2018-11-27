@@ -4,6 +4,11 @@ function Arena(name, gladiators) {
     this.gladiators = [];
     this.addGladiator = function(gladiator) {
         this.gladiators.push(gladiator);
+        if (this.gladiators.length > 2) {
+            this.gladiators.pop(gladiator);
+        } else {
+            console.log(this.gladiators.length);
+        }
     }
 }
 
@@ -25,3 +30,11 @@ colosseum.addGladiator(max);
 console.log(colosseum.gladiators);
     
 // ARENA SHOULD NEVER HAVE MORE THAN 2 GLADIATORS AT A TIME
+var max = new Gladiator("Maximums", "Trident");
+var titus = new Gladiator("Titus", "Sword");
+var andronicus = new Gladiator("Andronicus", "Sword");
+var colosseum = new Arena("Colosseum");
+colosseum.addGladiator(max);
+colosseum.addGladiator(titus);
+colosseum.addGladiator(andronicus);
+console.log(colosseum.gladiators);
